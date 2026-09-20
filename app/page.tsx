@@ -163,14 +163,16 @@ function GeneratorCard({
   counterfactualPrompt,
   slug,
   status,
+  evidenceUrl,
 }: {
   number: string;
   title: string;
   concept: string;
   truePrompt: string;
   counterfactualPrompt: string;
-  slug: 'tether' | 'fan';
+  slug: 'tether' | 'fan' | 'cart';
   status: string;
+  evidenceUrl: string;
 }) {
   const videos = [
     { label: 'True', note: 'Physically correct', src: `/media/${slug}-true.mp4` },
@@ -213,6 +215,9 @@ function GeneratorCard({
         <span>4 synchronized streams</span>
         <span>Deterministic replay</span>
       </div>
+      <a className="detail-link detail-link-dark" href={evidenceUrl} target="_blank" rel="noreferrer">
+        View full four-stream review <ArrowUpRight aria-hidden="true" />
+      </a>
     </article>
   );
 }
@@ -276,7 +281,7 @@ export default function Home() {
           </div>
           <div className="signal-grid">
             <div><strong>05</strong><span>robot case studies</span></div>
-            <div><strong>02</strong><span>physics generators</span></div>
+            <div><strong>03</strong><span>physics generators</span></div>
           </div>
           <div className="signal-rule" />
           <p className="signal-note">
@@ -368,6 +373,7 @@ export default function Home() {
               counterfactualPrompt="A fixed camera records the same taut-string demonstration under normal gravity. At frame 42 the string visibly breaks; despite having no connection, the unsupported ball continues along the same horizontal circular path instead of flying tangentially and falling."
               slug="tether"
               status="Iterative prototype"
+              evidenceUrl="https://32-193-64-176.sslip.io/reviews/2026-09-11-tether-cut-circular-motion/index.html"
             />
             <GeneratorCard
               number="G–02"
@@ -377,6 +383,17 @@ export default function Home() {
               counterfactualPrompt="A fixed camera records the same rail-supported cart and sealed onboard fan–sail system. At frame 42 the fan spins up; its backward reaction is missing while the sail impulse remains, so the closed cart coasts right from its ruler mark."
               slug="fan"
               status="Reviewed output"
+              evidenceUrl="https://32-193-64-176.sslip.io/reviews/2026-09-12-onboard-fan-sail-cart/index.html"
+            />
+            <GeneratorCard
+              number="G–03"
+              title="Accelerating Cart — Airborne Ball Keeps Cart Acceleration"
+              concept="A supported cart accelerates along visible rails and launches a ball upward. The correct free projectile falls behind the accelerating launch point; the counterfactual retains one invisible horizontal coupling, carrying the airborne ball back to the moving marker."
+              truePrompt="A blue cart accelerates steadily to the right on visible rails and launches a red ball upward from its green marked launch point. After release, the free ball follows a normal parabolic trajectory under gravity while keeping only its launch-time horizontal velocity. Because the cart continues accelerating ahead, the ball cannot return to the moving launch point and lands on the rear yellow pad. The rails, acceleration arrow, launch marker, landing pads, and cart structure remain visible throughout the supported laboratory scene."
+              counterfactualPrompt="A blue cart accelerates steadily to the right on visible rails and launches a red ball upward from its green marked launch point. After release, the free ball still follows the same vertical motion under gravity but incorrectly continues receiving the cart’s horizontal acceleration. That invisible coupling carries the airborne ball forward so it returns to the moving green launch point instead of falling behind. The rails, acceleration arrow, launch marker, landing pads, and cart structure remain visible throughout the supported laboratory scene."
+              slug="cart"
+              status="PR #534 · Review pending"
+              evidenceUrl="https://32-193-64-176.sslip.io/reviews/2026-09-18-accelerating-cart-projectile-keeps-cart-acceleration/index.html"
             />
           </div>
         </div>
