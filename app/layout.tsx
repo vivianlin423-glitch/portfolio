@@ -6,19 +6,22 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vivian-video-reasoning.quick-bead-0665.chatgpt.site'),
+  metadataBase: new URL('https://vivianlin423-glitch.github.io/portfolio/'),
   title: 'Vivian Lin — Video Reasoning & Robotics',
   description:
     'Selected work in video reasoning, robotics simulation, counterfactual generation, and human evaluation.',
+  alternates: {
+    canonical: 'https://vivianlin423-glitch.github.io/portfolio/',
+  },
   openGraph: {
     title: 'Vivian Lin — Video Reasoning & Robotics',
     description:
       'Selected work in video reasoning, robotics simulation, counterfactual generation, and human evaluation.',
-    url: 'https://vivian-video-reasoning.quick-bead-0665.chatgpt.site',
+    url: 'https://vivianlin423-glitch.github.io/portfolio/',
     siteName: 'Vivian Lin — Video Reasoning & Robotics',
     images: [
       {
-        url: '/og.png',
+        url: 'https://vivianlin423-glitch.github.io/portfolio/og.png',
         width: 1200,
         height: 630,
         alt: 'Vivian Lin — Video Reasoning, Robotics, Simulation',
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
     title: 'Vivian Lin — Video Reasoning & Robotics',
     description:
       'Selected work in video reasoning, robotics simulation, counterfactual generation, and human evaluation.',
-    images: ['/og.png'],
+    images: ['https://vivianlin423-glitch.github.io/portfolio/og.png'],
   },
 };
 
