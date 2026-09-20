@@ -280,8 +280,8 @@ export default function Home() {
             <span>formal TV2V / RV2V review decisions</span>
           </div>
           <div className="signal-grid">
-            <div><strong>05</strong><span>robot case studies</span></div>
-            <div><strong>03</strong><span>physics generators</span></div>
+            <div><strong>25+</strong><span>robot video tasks</span></div>
+            <div><strong>29</strong><span>physics generator prototypes</span></div>
           </div>
           <div className="signal-rule" />
           <p className="signal-note">
